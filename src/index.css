@@ -1,0 +1,120 @@
+@font-face {
+  font-family: montserrat-bold;
+  src: url('assets/fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: montserrat-semibold;
+  src: url('assets/fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: montserrat-extrabold;
+  src: url('assets/fonts/Montserrat-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: montserrat-medium;
+  src: url('assets/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+  font-family: montserrat-regular;
+  src: url('assets/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: montserrat-light;
+  src: url('assets/fonts/Montserrat-Light.ttf');
+}
+
+body {
+  margin: 0;
+  background: #282c34;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 3.2s infinite;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease;
+  list-style: none;
+}
+
+.pagination .active {
+  color: white;
+  font-weight: bold;
+  font-family: montserrat-bold;
+  background: black;
+  transition: all 0.2s ease;
+}
+
+.pagination .disabled {
+  color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.pagination > li {
+  margin: 3px;
+  border-radius: 5px;
+  min-width: 30px;
+  border: 1px solid rgba(0,0,0,0.3);
+  padding: 0 1%;
+  font-size: medium;
+  text-align: center;
+  font-family: montserrat-medium;
+  transition: all 0.2s ease;
+}
+
+.pagination > li:hover {
+  cursor: pointer;
+}
+
+.pagination > li > a {
+  color: white;
+  text-decoration: none;
+}

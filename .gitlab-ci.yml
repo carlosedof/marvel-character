@@ -1,0 +1,14 @@
+react_test:
+  image: node:12.16.1
+  stage: test
+  before_script:
+    - npm install
+  script:
+    - npm run-script test
+react_build:
+  image: node:12.16.1
+  stage: build
+  before_script:
+    - npm install
+  script:
+    - npm run-script build
