@@ -52,10 +52,12 @@ const CharacterList = (props: any) => {
     useEffect( () => {
         if (findByName.data && findByName.data.characters && findByName.data.characters.length > 0) {
             setCharacterFiltered(findByName.data.characters);
+            setTotal(findByName.data.characters.length);
         } else {
             setCharacterFiltered(characters);
+            setTotal(characters.length);
         }
-    }, [findByName.data, characters]);
+    }, [findByName.data, characters, setTotal]);
 
     useEffect( () => {
         if (searchParam) {
