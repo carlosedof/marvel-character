@@ -75,7 +75,7 @@ const CharacterList = (props: any) => {
             { (findByName.loading || findAll.loading) && <Loading/> }
             <InputText
                 data-testid="form-field"
-                placeholder="Digite o nome para pesquisar"
+                placeholder="inform character name to search"
                 value={searchParam}
                 onChange={handleChange}
                 clearFn={clearFn}
