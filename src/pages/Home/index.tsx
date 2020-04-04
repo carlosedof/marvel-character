@@ -1,12 +1,11 @@
 import React from 'react';
-import {Container, PageSubtitle, PageTitle} from "./styles";
+import {Container, PageSubtitle} from "./styles";
 import CharacterList from "../CharacterList";
 
 const Home = () => {
 
     return (
         <Container>
-            <PageTitle>Frontend Challenge - Marvel Characters</PageTitle>
             <PageSubtitle>click on card to view details</PageSubtitle>
             <CharacterList/>
         </Container>

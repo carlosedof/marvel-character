@@ -47,3 +47,8 @@ export const Title = styled.div`
     text-align: center;
     margin-top: 0.5rem;
 `;
+
+export const NoResultsStyled = styled.h3`
+    color: white;
+    font-family: montserrat-semibold;
+`;

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Character} from "../../models/Character";
-import {CharacterCard, CharacterListContainer, Container, Thumbnail, Title} from "./styles";
+import {CharacterCard, CharacterListContainer, Container, NoResultsStyled, Thumbnail, Title} from "./styles";
 import {withRouter} from "react-router-dom";
 import InputText from "../../common/InputText";
 import {useLazyQuery} from "@apollo/react-hooks";
@@ -52,7 +52,7 @@ const CharacterList = (props: any) => {
     }, [findAll.data, setTotal, setCharacters, setCharacterFiltered, setTotalCached]);
 
     useEffect( () => {
-        if (findByName.data && findByName.data.characters && findByName.data.characters.length > 0) {
+        if (findByName.data && findByName.data.characters) {
             setCharacterFiltered(findByName.data.characters);
             setTotal(findByName.data.characters.length);
         } else {
@@ -91,14 +91,21 @@ const CharacterList = (props: any) => {
                     </CharacterCard>
                     )
                 }
+                {
+                    (!findByName.loading && !findAll.loading && characterFiltered?.length < 1) &&
+                    <NoResultsStyled>No results!</NoResultsStyled>
+                }
             </CharacterListContainer>
-            <Pagination
-                activePage={activePage}
-                itemsCountPerPage={20}
-                totalItemsCount={total}
-                pageRangeDisplayed={5}
-                onChange={handlePageChange}
-            />
+            {
+                (!findByName.loading && !findAll.loading && characterFiltered?.length > 0) &&
+                <Pagination
+                    activePage={activePage}
+                    itemsCountPerPage={20}
+                    totalItemsCount={total}
+                    pageRangeDisplayed={5}
+                    onChange={handlePageChange}
+                />
+            }
         </Container>
     );
 };
