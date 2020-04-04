@@ -2,6 +2,7 @@
 
 Foi desenvolvida uma aplicação que lista os personagens da marvel utilizando a [marvel api](https://developer.marvel.com/) com um backend GraphQl para intermediar a utilização do Apollo Client. Para isso foi realizado um fork do projeto [MarvelQL](https://github.com/Novvum/MarvelQL), com ajustes para corrigir erros impeditivos, e disponibilizado neste endereço [MarvelQl Heroku](https://marvelql.herokuapp.com/).
 
+Acesse a DEMO [aqui](https://react-marvel-char.herokuapp.com/)!
 
 ## Instalação
 
